@@ -1,7 +1,12 @@
 <template name="home">
-  <div class="container">
-    <div class="center">
-      {{> atForm}}
+  {{#if isUser}}
+    {{> main_page_buttons}}
+  {{else}}
+    <div class="container">
+      <div class="center">
+        {{> atForm}}
+      </div>
     </div>
-  </div>
+  {{/if}}
+
 </template>
