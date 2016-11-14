@@ -4,5 +4,5 @@ import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
 Template.home.onCreated(() => {
-  return Meteor.user() ? FlowRouter.go('/main') : false
+  return Meteor.user() ? FlowRouter.go('/main_page') : FlowRouter.go('/');
 })
