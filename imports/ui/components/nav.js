@@ -6,7 +6,7 @@ import './nav.html';
 
 Template.nav.events({
   'click .logout' (event) {
-    console.log("LogOUT")
+    //console.log("LogOUT")
     Meteor.logout();
     FlowRouter.go('/');
   }

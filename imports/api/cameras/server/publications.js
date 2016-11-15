@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
-import { Cameras } from '../cameras/cameras.js';
+import { Camera } from '../cameras.js';
 
-Meteor.publish('myHouse', function(thisUsersEmail) {
-  return House.find({ members: thisUsersEmail });
+Meteor.publish('myCameras', function(thisuserid) {
+  return Camera.find({ userID: thisuserid });
 })

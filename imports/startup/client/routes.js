@@ -4,7 +4,8 @@ import '../../ui/pages/home.js';
 import '../../ui/pages/live_streams.js';
 import '../../ui/layouts/default.js';
 import '../../ui/pages/saved_streams';
- const authroutes = FlowRouter.group({
+import '../../ui/pages/add_feed_page.js';
+const authroutes = FlowRouter.group({
    name: 'authenticated',
  })
 
@@ -26,5 +27,12 @@ import '../../ui/pages/saved_streams';
    name: 'saved_streams',
    action(){
      BlazeLayout.render('default', {yield: 'saved_streams'})
+   }
+ })
+
+ authroutes.route('/add_feed_page', {
+   name: 'add_feed_page',
+   action(){
+     BlazeLayout.render('default', {yield: 'add_feed_page'})
    }
  })
