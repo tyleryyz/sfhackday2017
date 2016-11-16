@@ -21,20 +21,9 @@ Camera.schema = new SimpleSchema({
     type: String,
     optional: false,
   },
-  home: {
-    type: Boolean,
-    optional: false,
-    defaultValue: false,
-  },
-  misc: {
-    type: Boolean,
-    optional: false,
-    defaultValue: false,
-  },
-  weather: {
-    type: Boolean,
-    optional: false,
-    defaultValue: false,
+  categories: {
+    type: String,
+    optional: true,
   },
   favorite: {
     type: Boolean,
