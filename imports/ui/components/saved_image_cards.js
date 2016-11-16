@@ -22,7 +22,11 @@ Template.saved_image_cards.helpers({
     console.log("here!");
     console.log(category_sess);
     console.log(favorites_sess);
+    console.log("image_sess");
+    console.log(image_sess);
     console.log(String(user));
+    console.log(Saved_camera.find({userID:user, categories:category_sess, favorite:favorites_sess, image:image_sess}).fetch());
+
     if (Session.get("favorites")==true){
       console.log(Saved_camera.find({userID:user, categories:category_sess, favorite:favorites_sess, image:image_sess}).fetch());
       return Saved_camera.find({userID:user, categories:category_sess, favorite:favorites_sess, image:image_sess})

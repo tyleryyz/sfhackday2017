@@ -20,3 +20,10 @@ Template.schedule.helpers({
     ]
   }
 })
+
+Template.schedule.events({
+  'click .submitButton'(event){
+    Notifications.info('Schedule Saved!', 'New schedule for feed added!');
+    //console.log("you did the thing!");
+  }
+})
