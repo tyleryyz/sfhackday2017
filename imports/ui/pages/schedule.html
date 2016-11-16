@@ -1,0 +1,29 @@
+<template name="schedule">
+  {{#if Template.subscriptionsReady}}
+  <br>
+  <div class="container">
+    {{#autoForm collection=cameraHelper id="create_stream" type="insert"}}
+      <p>Enter Feed URL</p>
+      {{> afQuickField name='url'}}
+      <p>Enter Date</p>
+      {{> afQuickField label=' ' name='timestamp'}}
+      <p>Enter Description</p>
+      {{> afQuickField label='description' name='title'}}
+      <p>Add tag</p>
+      {{> afQuickField name='categories' label=' ' options=categoryHelper}}
+      <br>
+      {{> afQuickField name='image'}}
+      {{> afQuickField name='video'}}
+      <br>
+      <p>Favorite</p>
+      {{> afQuickField name='favorite' label=' ' type='switch'}}
+      <br>
+      <br>
+      <br>
+      <br>
+      <button type="submit" class="submitButton btn waves-effect waves-light">Insert</button>
+      {{> notifications }}
+    {{/autoForm}}
+  </div>
+  {{/if}}
+</template>

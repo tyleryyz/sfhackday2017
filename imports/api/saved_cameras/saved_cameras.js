@@ -22,7 +22,7 @@ Saved_camera.schema = new SimpleSchema({
     optional: false,
   },
   timestamp: {
-    type: String,
+    type: Date,
     optional: false,
   },
   categories: {

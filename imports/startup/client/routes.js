@@ -6,6 +6,9 @@ import '../../ui/layouts/default.js';
 import '../../ui/pages/saved_streams';
 import '../../ui/pages/add_feed_page.js';
 import '../../ui/pages/saved_images.js';
+import '../../ui/pages/saved_videos.js';
+import '../../ui/pages/schedule.js';
+
 const authroutes = FlowRouter.group({
    name: 'authenticated',
  })
@@ -44,3 +47,17 @@ const authroutes = FlowRouter.group({
      BlazeLayout.render('default', {yield: 'saved_images'})
    }
  })
+
+  authroutes.route('/saved_videos', {
+    name: 'saved_videos',
+    action(){
+      BlazeLayout.render('default', {yield: 'saved_videos'})
+    }
+  })
+
+  authroutes.route('/schedule', {
+    name: 'schedule',
+    action(){
+      BlazeLayout.render('default', {yield: 'schedule'})
+    }
+  })

@@ -33,3 +33,5 @@ gildaspk:autoform-materialize
 gfk:notifications
 chriswessels:back-behaviour
 session
+momentjs:moment
+tsega:bootstrap3-datetimepicker
